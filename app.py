@@ -71,4 +71,4 @@ elif operation == "Plot Function":
 
 # Footer
 st.markdown("---")
-st.markdown("Made with ❤️ by [Your Name]")
+st.markdown("Made with ❤️ by Fatima Tanveer")
