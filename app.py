@@ -6,6 +6,27 @@ import time
 # Page configuration
 st.set_page_config(page_title="Scientific Graphical Calculator", layout="wide")
 
+# Add custom CSS for gradient background
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: linear-gradient(to right, #000000, #434343, #f0f0f0);
+        color: white;
+    }
+    .sidebar .sidebar-content {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+    }
+    .stButton>button {
+        background-color: #4CAF50; /* Green */
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Title
 st.title("🧮 Scientific Graphical Calculator")
 st.markdown("---")
@@ -52,14 +73,14 @@ elif operation == "Plot Function":
             
             # Plotting
             plt.figure(figsize=(10, 6))
-            plt.plot(x, y, label=f"y = {expression}", color='blue')
-            plt.title("Graph of the Function")
-            plt.xlabel("x")
-            plt.ylabel("y")
-            plt.axhline(0, color='black', lw=0.5, ls='--')
-            plt.axvline(0, color='black', lw=0.5, ls='--')
-            plt.grid()
-            plt.legend()
+            plt.plot(x, y, label=f"y = {expression}", color='cyan')
+            plt.title("Graph of the Function", color='white')
+            plt.xlabel("x", color='white')
+            plt.ylabel("y", color='white')
+            plt.axhline(0, color='white', lw=0.5, ls='--')
+            plt.axvline(0, color='white', lw=0.5, ls='--')
+            plt.grid(color='white', linestyle='--', linewidth=0.5)
+            plt.legend(facecolor='black', edgecolor='white', fontsize='small')
             st.pyplot(plt)
 
             # Animation: Show a loading effect
