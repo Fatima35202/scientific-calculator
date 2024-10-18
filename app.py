@@ -1,4 +1,3 @@
-%%writefile app.py
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
@@ -72,4 +71,4 @@ elif operation == "Plot Function":
 
 # Footer
 st.markdown("---")
-st.markdown("Made with ❤️ by Fatima Tanveer")
+st.markdown("Made with ❤️ by [Your Name]")
